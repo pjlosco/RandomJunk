@@ -1,32 +1,16 @@
 #Android
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
-PATH="$PATH:/usr/local/opt/android-sdk/tools"
-PATH="$PATH:/usr/local/opt/android-sdk/platform-tools"
-#PATH="$PATH:/usr/local/opt/android-sdk/build-tools/18.0.1"
-PATH="$PATH:/opt/ruby-enterprise-1.8.7-2010.02/bin"
 PATH="$PATH:/Users/patrick/.m2/repository"
 export PATH
 
-export JAVA_HOME=`/usr/libexec/java_home -v 1.6`
-export PATH=$PATH:/opt/ruby-enterprise-1.8.7-2010.02/bin
 # Alias'
 alias gs="git status"
 alias gd="git diff"
 alias gdc="git diff --cached"
 alias gl="git log"
 alias l="ls -la"
-alias cdandroid="cd /Users/patrick/code/android"
-alias cdautomation="cd /Users/patrick/code/automation"
-alias cdios="cd /Users/patrick/code/ios-app"
-alias androidemulator="emulator -avd Android4.3"
-alias androidhierarchy="/usr/local/opt/android-sdk/tools/hierarchyviewer"
-alias androidinspector="/usr/local/opt/android-sdk/tools/uiautomatorviewer"
-alias runandroidtests="cd ~/code/automation/GroupMeAppium/ && mvn -DappName=GroupMe-production-debug-unaligned.apk -Dtest=test.java.com.groupme.appium.android.suites.*Test surefire-report:report"
-alias runiphonetests="cd ~/code/automation/GroupMeAppium/ && mvn -Dtest=test.java.com.groupme.appium.ios.suites.*Test -DappName=GroupMe.app surefire-report:report"
 alias reloadprofile=". ~/.profile"
-alias updateandroid="/Users/patrick/code/automation/GroupMeAppium/apk/UpdateApps.sh /Users/patrick/code/"
-alias updateios="/Users/patrick/code/automation/GroupMeAppium/app/UpdateApps.sh /Users/patrick/code/"
 alias adbrestart="adb kill-server && adb start-server"
 
 #Prompt coloring
@@ -139,6 +123,6 @@ PS1+="${style_chars}@" # @
 #PS1+="${style_chars}: " # :
 PS1+="${style_path}\w" # Working directory
 PS1+="\$(prompt_git)" # Git details
-#PS1+="\n" # Newline
+PS1+="\n" # Newline
 #PS1+="${style_path}[\d \t] ${style_chars}$ \[${RESET}\]" # $ (and reset color)
 PS1+="${style_chars}$ \[${RESET}\]" # $ (and reset color)
